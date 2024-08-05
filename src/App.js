@@ -8,6 +8,8 @@ import {
 } from '@chakra-ui/react';
 import initialTheme from './theme/theme'; //  { themeGreen }
 import { useState } from 'react';
+import './Font.css';
+
 // Chakra imports
 
 export default function Main() {
