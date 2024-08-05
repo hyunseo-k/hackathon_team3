@@ -37,6 +37,7 @@ const routes = [
     component: <Diary />,
     secondary: true,
   },
+
   {
     name: '피드',
     layout: '/admin',

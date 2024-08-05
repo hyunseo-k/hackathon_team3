@@ -9,6 +9,7 @@ import {
 import initialTheme from './theme/theme'; //  { themeGreen }
 import { useState } from 'react';
 import './Font.css';
+import WriteDiary from 'views/admin/diary/writeDiary';
 
 // Chakra imports
 
@@ -23,7 +24,10 @@ export default function Main() {
           element={
             <AdminLayout theme={currentTheme} setTheme={setCurrentTheme} />
           }
-        />
+        >
+        </Route>
+
+        <Route path="write-diary" element={<WriteDiary />} />
 
         <Route path="/" element={<Navigate to="/admin" replace />} />
       </Routes>

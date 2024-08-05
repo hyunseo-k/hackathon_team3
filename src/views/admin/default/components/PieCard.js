@@ -25,7 +25,7 @@ export default function Conversion(props) {
         alignItems='center'
         w='100%'
         mb='8px'>
-        <Text color={textColor} fontSize='md' fontWeight='600' mt='4px'>
+        <Text color={textColor} fontSize='40px' fontWeight='600' mt='4px' fontFamily='One'>
           나의 자산 현황
         </Text>
         <Select

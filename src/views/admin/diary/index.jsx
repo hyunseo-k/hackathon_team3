@@ -67,13 +67,13 @@ export default function Diary() {
   return (
     <Box pt={{ base: "180px", md: "80px", xl: "80px" }}>
       <HStack justifyContent="space-between" mb="20px">
-        <Button onClick={handlePreviousMonth}>Previous Month</Button>
-        <Text fontSize="xl" fontWeight={500} color={textColor}>
+        <Button onClick={handlePreviousMonth}>이전 달</Button>
+        <Text fontSize="xl" fontFamily="Locus" fontWeight={500} color={textColor}>
           {new Date(0, currentMonth - 1).toLocaleString("default", {
             month: "long",
           })}
         </Text>
-        <Button onClick={handleNextMonth}>Next Month</Button>
+        <Button onClick={handleNextMonth}>이후 달</Button>
       </HStack>
       <Grid
         mb="20px"
@@ -84,18 +84,18 @@ export default function Diary() {
         {filteredEntries.map((entry, index) => (
           <Card key={index} mb="20px">
             <VStack align="start" spacing={3}>
-              <Text fontFamily="Jalnan" fontSize="40px" fontWeight={500} color={textColor}>
+              <Text fontFamily="Jalnan" fontSize="35px" color={textColor}>
                 {entry.title}
               </Text>
-              <Text fontFamily="One" fontSize="30px" color={textColor}>
+              <Text fontFamily="One" fontSize="25px" color={textColor}>
                 {entry.date}
-              </Text>
-              <Text fontFamily="Locus" fontSize="20px" color={textColor}>
-                {entry.content}
               </Text>
               <Badge colorScheme={entry.type === "매수" ? "green" : "red"}>
                 {entry.type}
               </Badge>
+              <Text fontFamily="Locus" fontSize="20px" color={textColor}>
+                {entry.content}
+              </Text>
             </VStack>
           </Card>
         ))}
